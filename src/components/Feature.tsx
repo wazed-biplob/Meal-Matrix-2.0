@@ -1,17 +1,17 @@
 const Clients = () => {
   return (
-    <div className="bg-slate-800 dark:bg-gray-100 dark:text-gray-800 text-[lightgrey]">
+    <div className="dark:bg-slate-800 bg-gray-100 text-gray-800 dark:text-[lightgrey]">
       <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-poppins font-extrabold sm:text-4xl">
             All the features you want
           </h2>
-          <p className="mt-4 text-lg dark:text-gray-600">
+          <p className="mt-4 text-lg text-gray-600 dark:text-white">
             Experience the essence of our project through these captivating
             features
           </p>
         </div>
-        <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
+        <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8 dark:text-white">
           <div className="flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ const Clients = () => {
             </svg>
             <div className="ml-3">
               <dt className="text-lg font-medium">Farm-to-Table Freshness</dt>
-              <dd className="mt-2 dark:text-gray-600">
+              <dd className="mt-2 dark:text-gray-400">
                 Our commitment to freshness begins at the source. We partner
                 directly with local farms, cultivating relationships that ensure
                 we receive the freshest, most flavorful ingredients available.
@@ -58,7 +58,7 @@ const Clients = () => {
             </svg>
             <div className="ml-3">
               <dt className="text-lg font-medium">Seasonal Menus</dt>
-              <dd className="mt-2 dark:text-gray-600">
+              <dd className="mt-2 dark:text-gray-400">
                 Embracing the bounty of each season, our menus are thoughtfully
                 crafted to showcase the best of what nature has to offer. From
                 vibrant spring greens to hearty winter squash, our chefs draw
@@ -87,7 +87,7 @@ const Clients = () => {
             </svg>
             <div className="ml-3">
               <dt className="text-lg font-medium">Organic Ingredients</dt>
-              <dd className="mt-2 dark:text-gray-600">
+              <dd className="mt-2 dark:text-gray-400">
                 Quality is paramount in our kitchen. That's why we use only the
                 finest organic ingredients, free from synthetic pesticides and
                 genetically modified organisms. Our commitment to organic
@@ -115,7 +115,7 @@ const Clients = () => {
             </svg>
             <div className="ml-3">
               <dt className="text-lg font-medium">Sustainable Practices</dt>
-              <dd className="mt-2 dark:text-gray-600">
+              <dd className="mt-2 dark:text-gray-400">
                 We recognize the importance of stewardship in the kitchen. From
                 reducing food waste through composting and creative use of
                 leftovers to using eco-friendly packaging materials, we strive
@@ -144,7 +144,7 @@ const Clients = () => {
             </svg>
             <div className="ml-3">
               <dt className="text-lg font-medium">Chef-Curated Recipes</dt>
-              <dd className="mt-2 dark:text-gray-600">
+              <dd className="mt-2 dark:text-gray-400">
                 Behind every dish is a passionate chef dedicated to creating
                 culinary experiences that delight the senses. Our chefs bring
                 years of experience and expertise to the table, infusing each
@@ -172,7 +172,7 @@ const Clients = () => {
             </svg>
             <div className="ml-3">
               <dt className="text-lg font-medium">Diverse Cuisine</dt>
-              <dd className="mt-2 dark:text-gray-600">
+              <dd className="mt-2 dark:text-gray-400">
                 Variety is the spice of life, and our menu reflects that ethos.
                 Drawing inspiration from culinary traditions around the world,
                 we offer a diverse array of dishes that celebrate global flavors
@@ -200,7 +200,7 @@ const Clients = () => {
             </svg>
             <div className="ml-3">
               <dt className="text-lg font-medium">Dietary Options</dt>
-              <dd className="mt-2 dark:text-gray-600">
+              <dd className="mt-2 dark:text-gray-400">
                 We believe that everyone deserves to enjoy a delicious meal,
                 regardless of dietary restrictions or preferences. That's why we
                 offer a wide range of options to accommodate various dietary
@@ -229,7 +229,7 @@ const Clients = () => {
             </svg>
             <div className="ml-3">
               <dt className="text-lg font-medium">Community Engagement</dt>
-              <dd className="mt-2 dark:text-gray-600">
+              <dd className="mt-2 dark:text-gray-400">
                 At the heart of our philosophy is a commitment to community. We
                 believe in the power of food to bring people together, and we're
                 proud to partner with local farmers, artisans, and organizations

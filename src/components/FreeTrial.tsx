@@ -1,16 +1,16 @@
 const FreeTrial = () => {
   return (
     <>
-      <div className="my-2 border relative mx-auto px-4 pt-16 sm:max-w-xl md:max-w-full md:px-8 lg:py-32 xl:px-20">
+      <div className="my-2 relative mx-auto pt-16 md:max-w-full lg:py-32 xl:px-20">
         <div className="mx-auto max-w-xl lg:max-w-screen-xl">
           <div className="mb-16 text-center lg:mb-0 lg:max-w-lg lg:text-left">
             <div className="mb-6 max-w-xl">
-              <h2 className="mb-6 max-w-lg font-sans text-3xl font-bold tracking-tight text-slate-700 sm:text-5xl sm:leading-snug">
+              <h2 className="mb-6 max-w-lg font-sans text-3xl font-bold tracking-tight text-slate-700 sm:text-5xl sm:leading-snug dark:text-[grey]">
                 The #1 Supply Chain <br />
                 in&nbsp;
                 <span className="inline-block text-blue-500">The Pacific</span>
               </h2>
-              <p className="text-base text-gray-700 md:text-lg">
+              <p className="text-base text-gray-700 md:text-lg dark:text-[lightgrey]">
                 Imagine a world where no one goes hungry and surplus food finds
                 its way to those in need. At NutriServe, we’re making that
                 vision a reality. Our cutting-edge Food Distribution and

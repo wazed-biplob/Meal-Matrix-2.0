@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <>
-      <div className="overflow-x-hidden bg-gray-800">
+      <div className="overflow-x-hiddendar bg-gray-800">
         <section className="relative py-12 sm:py-16 lg:pt-20 xl:pb-0">
           <div className="shrink-0 from-white/40 absolute left-1/2 h-96 w-96 -translate-x-1/2 rounded-full border border-gray-500 bg-gradient-to-br"></div>
 

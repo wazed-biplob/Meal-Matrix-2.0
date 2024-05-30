@@ -1,10 +1,11 @@
 "use client";
 import { Carousel } from "flowbite-react";
 import SectionHeading from "./SectionHeading";
+import SectionContainer from "./SectionContainer";
 
 export function CarouselSlider() {
   return (
-    <>
+    <SectionContainer>
       <SectionHeading subtitle="We believe art is a powerful form of expression and communication, and our gallery aims to foster a deeper appreciation for the creative process. Whether you're an avid art collector, a casual admirer, or simply looking for inspiration, our gallery offers something for everyone.">
         Gallery Moments
       </SectionHeading>
@@ -15,6 +16,6 @@ export function CarouselSlider() {
           <img src="https://i.ibb.co/4NCkMp9/2.jpg" alt="..." />
         </Carousel>
       </div>
-    </>
+    </SectionContainer>
   );
 }

@@ -10,7 +10,7 @@ export interface IReview {
 const DonorCard = ({ review }: { review: IReview }) => {
   return (
     <div>
-      <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 bg-gray-900 text-gray-100">
+      <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y text-black rounded-md border border-gray-400 dark:divide-gray-700 dark:bg-gray-900 dark:text-gray-100">
         <div className="flex justify-between p-4">
           <div className="flex space-x-4">
             <div>
@@ -22,10 +22,12 @@ const DonorCard = ({ review }: { review: IReview }) => {
             </div>
             <div>
               <h4 className="font-bold">{review?.donorName}</h4>
-              <span className="text-xs text-gray-400">{review.reviewDate}</span>
+              <span className="text-xs dark:text-gray-400">
+                {review.reviewDate}
+              </span>
             </div>
           </div>
-          <div className="flex items-center space-x-2 text-yellow-500">
+          <div className="flex items-center space-x-2 dark:text-yellow-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -36,7 +38,7 @@ const DonorCard = ({ review }: { review: IReview }) => {
             <span className="text-xl font-bold">{review?.rating}</span>
           </div>
         </div>
-        <div className="p-4 space-y-2 text-sm text-gray-400">
+        <div className="p-4 space-y-2 text-sm dark:text-gray-400">
           {review?.description}
         </div>
       </div>

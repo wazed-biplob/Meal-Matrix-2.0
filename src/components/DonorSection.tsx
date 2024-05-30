@@ -3,6 +3,7 @@ import { useGetDonorReviewsQuery } from "../redux/api/baseApi";
 import DonorCard, { IReview } from "./DonorCard";
 import SectionHeading from "./SectionHeading";
 import { motion, useAnimation, useInView } from "framer-motion";
+import SectionContainer from "./SectionContainer";
 
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -53,16 +54,18 @@ const DonorSection = () => {
   const { data } = useGetDonorReviewsQuery(undefined);
   return (
     <>
-      <SectionHeading subtitle="Don’t just take our word for it – read on to see how our carefully curated selection has transformed everyday meals into extraordinary feasts. Join our community of food lovers who trust us to bring the finest ingredients and the most delicious treats to their kitchens.">
-        Real Flavor: Hear from Our Satisfied Customers!
-      </SectionHeading>
-      <div className="grid grid-cols-3 gap-4">
-        {data?.data?.map((review: IReview, index: number) => (
-          <CardWrapper key={review._id} index={index}>
-            <DonorCard review={review} />
-          </CardWrapper>
-        ))}
-      </div>
+      <SectionContainer>
+        <SectionHeading subtitle="Don’t just take our word for it – read on to see how our carefully curated selection has transformed everyday meals into extraordinary feasts. Join our community of food lovers who trust us to bring the finest ingredients and the most delicious treats to their kitchens.">
+          Real Flavor: Hear from Our Satisfied Customers!
+        </SectionHeading>
+        <div className="grid grid-cols-3 gap-4">
+          {data?.data?.map((review: IReview, index: number) => (
+            <CardWrapper key={review._id} index={index}>
+              <DonorCard review={review} />
+            </CardWrapper>
+          ))}
+        </div>
+      </SectionContainer>
     </>
   );
 };

@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../redux/feature/hook";
 import { logout } from "../redux/auth/authSlice";
+import Toggle from "./Toggle";
 
 const Navbar = () => {
   const { user } = useAppSelector((state) => state.user);
-  console.log(user);
+
   const dispatch = useAppDispatch();
   return (
     <>
-      <div className="bg-gray-800 relative flex flex-col overflow-hidden px-4 py-4 text-gray-200 md:mx-auto md:flex-row md:items-center">
+      <div className="bg-slate-400 dark:bg-gray-800 z-10 flex flex-col overflow-hidden px-4 py-4 text-gray-200 md:mx-auto md:flex-row md:items-center sticky top-0">
         <Link to="/">
           <h3 className="border px-2 flex cursor-pointer items-center whitespace-nowrap text-2xl font-black text-blue-50">
             <span className="text-[#22C55E]  font-bold">M</span>
@@ -16,7 +17,7 @@ const Navbar = () => {
             <span className="text-[#3B82F6] font-bold">M</span>atrix
           </h3>
         </Link>
-        <input type="checkbox" className="peer hidden" id="navbar-open" />
+
         <label
           className="absolute top-5 right-7 cursor-pointer md:hidden"
           htmlFor="navbar-open"
@@ -42,7 +43,9 @@ const Navbar = () => {
             <li className="font-bold md:mr-12">
               <Link to="/supplies">All Supplies</Link>
             </li>
-
+            <li>
+              <Toggle />
+            </li>
             <li className="md:mr-12 flex gap-x-2">
               {user?.username ? (
                 <>

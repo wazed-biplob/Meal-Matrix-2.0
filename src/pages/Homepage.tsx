@@ -50,7 +50,7 @@ const CardWrapper = ({ children }: { children: React.ReactNode }) => {
 
 const Homepage = () => {
   return (
-    <div>
+    <div className="bg-slate-300 dark:bg-slate-800">
       <motion.div
         initial="hidden"
         animate="visible"

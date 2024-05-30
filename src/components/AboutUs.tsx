@@ -2,11 +2,11 @@ import SectionHeading from "./SectionHeading";
 
 const AboutUs = () => {
   return (
-    <div className="pt-10">
+    <div className="mt-10">
       <SectionHeading subtitle="Our journey began with a simple idea: to bring gourmet experiences to homes everywhere. We believe that food is more than just sustenance; it is a celebration of life, a bridge between cultures, and a source of joy and connection.">
         About Us
       </SectionHeading>
-      <div className="bg-white py-6 sm:py-8 lg:py-12">
+      <div className="bg-white pb-6 sm:py-8 lg:py-12 dark:bg-slate-800">
         <div className="mx-auto px-4 md:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
             <div className="md:pt-8 lg:flex lg:flex-col lg:justify-center">
@@ -14,11 +14,11 @@ const AboutUs = () => {
                 Who We Are
               </p>
 
-              <h1 className="mb-4 mt-2 text-center text-2xl font-bold text-gray-800 sm:text-3xl md:mb-6 md:text-left">
+              <h1 className="mb-4 mt-2 text-center text-2xl font-bold text-gray-800 sm:text-3xl md:mb-6 md:text-left dark:text-[grey]">
                 Meal-Matrix at a Glance
               </h1>
 
-              <p className="mb-6 text-gray-500 sm:text-lg md:mb-8">
+              <p className="mb-6 text-gray-500 sm:text-lg md:mb-8 text-justify dark:text-[lightgrey]">
                 Welcome to Meal-Matrix, your trusted partner in ensuring that
                 every community has access to nutritious meals and essential
                 supplies. At NutriServe, we believe that access to healthy food
