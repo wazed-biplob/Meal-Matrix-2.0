@@ -9,7 +9,7 @@ const Navbar = () => {
   const dispatch = useAppDispatch();
   return (
     <>
-      <div className="bg-slate-400 dark:bg-gray-800 z-10 flex flex-col overflow-hidden px-4 py-4 text-gray-200 md:mx-auto md:flex-row md:items-center sticky top-0">
+      <div className="bg-slate-400 dark:bg-gray-800 z-10 backdrop-blur-sm bg-opacity-90 flex flex-col overflow-hidden px-4 py-4 text-gray-200 md:mx-auto md:flex-row md:items-center sticky top-0">
         <Link to="/">
           <h3 className="border px-2 flex cursor-pointer items-center whitespace-nowrap text-2xl font-black text-blue-50">
             <span className="text-[#22C55E]  font-bold">M</span>

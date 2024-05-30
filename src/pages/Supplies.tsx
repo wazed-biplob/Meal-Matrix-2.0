@@ -1,4 +1,5 @@
 import Card from "../components/Card";
+import SectionContainer from "../components/SectionContainer";
 import SectionHeading from "../components/SectionHeading";
 import { useGetProductsQuery } from "../redux/api/baseApi";
 import { IProduct } from "../redux/feature/productSlice";
@@ -18,7 +19,7 @@ const Supplies = () => {
     );
   }
   return (
-    <>
+    <SectionContainer>
       <SectionHeading subtitle="Join us in a celebration of food that’s both delightful and unforgettable. Taste the difference in every product, crafted to bring joy and satisfaction to your table.">
         All Supply Products
       </SectionHeading>
@@ -27,7 +28,7 @@ const Supplies = () => {
           <Card key={product._id} product={product} />
         ))}
       </div>
-    </>
+    </SectionContainer>
   );
 };
 

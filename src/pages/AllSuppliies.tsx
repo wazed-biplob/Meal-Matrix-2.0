@@ -9,6 +9,7 @@ import { IProduct } from "../redux/feature/productSlice";
 import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
+import SectionContainer from "../components/SectionContainer";
 
 const AllSuppliies = () => {
   const { data, isLoading } = useGetProductsQuery(undefined);

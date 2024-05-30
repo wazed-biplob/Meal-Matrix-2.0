@@ -78,19 +78,6 @@ const CardSection = () => {
             <CardWrapper key={product._id} index={index}>
               <Card product={product} />
             </CardWrapper>
-            // <motion.div
-            //   key={product._id}
-            //   variants={cardVariants}
-            //   initial="hidden"
-            //   animate="visible"
-            //   transition={{
-            //     duration: 1.0,
-            //     ease: "easeOut",
-            //     delay: products.indexOf(product) * 0.5,
-            //   }}
-            // >
-            //   <Card product={product} />
-            // </motion.div>
           ))}
         </div>
         <div>
