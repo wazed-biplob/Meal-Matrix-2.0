@@ -49,6 +49,12 @@ export const baseApi = createApi({
         body: data,
       }),
     }),
+    getDonors: builder.query({
+      query: () => ({
+        url: "/donor-details",
+        method: "GET",
+      }),
+    }),
     login: builder.mutation({
       query: (data) => ({
         url: "/auth/login",
@@ -67,4 +73,5 @@ export const {
   usePostProductMutation,
   useDonateSupplyMutation,
   useDeleteProductMutation,
+  useGetDonorsQuery,
 } = baseApi;

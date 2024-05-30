@@ -4,6 +4,7 @@ import DonorCard, { IReview } from "./DonorCard";
 import SectionHeading from "./SectionHeading";
 import { motion, useAnimation, useInView } from "framer-motion";
 import SectionContainer from "./SectionContainer";
+import Loader from "./Loader";
 
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -51,7 +52,8 @@ const CardWrapper = ({
 };
 
 const DonorSection = () => {
-  const { data } = useGetDonorReviewsQuery(undefined);
+  const { data, isLoading, isFetching } = useGetDonorReviewsQuery(undefined);
+  if (isLoading || isFetching) return <Loader />;
   return (
     <>
       <SectionContainer>
