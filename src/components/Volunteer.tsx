@@ -3,7 +3,7 @@ import { IVolunteer } from "../types/types";
 const Volunteer = ({ volunteer }: { volunteer: IVolunteer }) => {
   return (
     <>
-      <section className="py-6 dark:bg-gray-100 dark:text-gray-800 border border-black rounded-md">
+      <section className="py-6 dark:bg-gray-100 dark:text-gray-800 border border-slate-200 rounded-md">
         <div className="p-4 mx-auto space-y-16 sm:p-10">
           <div className="w-full ">
             <img

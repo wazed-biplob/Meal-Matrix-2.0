@@ -18,7 +18,7 @@ const Volunteer = () => {
           />
           <input
             placeholder="Last Name"
-            className="w-full rounded-md border bg-slate-300 px-2 py-2 outline-none ring-blue-600 focus:ring-1"
+            className="w-full rounded-md border px-2 py-2 outline-none ring-blue-600 focus:ring-1"
           />
         </div>
         <div className="flex flex-col items-center gap-4 border-b py-4 sm:flex-row">

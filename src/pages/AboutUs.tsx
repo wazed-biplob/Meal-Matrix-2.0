@@ -1,3 +1,4 @@
+import Loader from "../components/Loader";
 import SectionContainer from "../components/SectionContainer";
 import SectionHeading from "../components/SectionHeading";
 import Volunteer from "../components/Volunteer";
@@ -5,7 +6,8 @@ import { useGetVolunteersQuery } from "../redux/api/baseApi";
 import { IVolunteer } from "../types/types";
 
 const AboutUs = () => {
-  const { data: volunteerData } = useGetVolunteersQuery(undefined);
+  const { data: volunteerData, isLoading } = useGetVolunteersQuery(undefined);
+  if (isLoading) return <Loader />;
   return (
     <>
       <SectionContainer>
