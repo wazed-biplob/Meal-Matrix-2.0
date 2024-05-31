@@ -12,6 +12,7 @@ import Supplies from "../pages/Supplies";
 import PrivateRoute from "./PrivateRoute";
 import LeaderBoard from "../pages/LeaderBoard";
 import Community from "../pages/Community";
+import CreateTestimonials from "../pages/CreateTestimonials";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +48,7 @@ export const router = createBrowserRouter([
         element: <CreateSupply />,
       },
       { path: "supplies", element: <AllSuppliies /> },
+      { path: "create-testimonial", element: <CreateTestimonials /> },
     ],
   },
 ]);

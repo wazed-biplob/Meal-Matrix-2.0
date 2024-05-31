@@ -28,6 +28,14 @@ export const baseApi = createApi({
       }),
       invalidatesTags: ["products"],
     }),
+    updateProduct: builder.mutation({
+      query: (data) => ({
+        url: "/product/edit",
+        method: "PUT",
+        body: data,
+      }),
+      invalidatesTags: ["products"],
+    }),
     getDonorReviews: builder.query({
       query: () => ({
         url: "/donor-reviews",
@@ -91,4 +99,5 @@ export const {
   useGetDonorsQuery,
   useGetCommentsQuery,
   usePostCommentsMutation,
+  useUpdateProductMutation,
 } = baseApi;

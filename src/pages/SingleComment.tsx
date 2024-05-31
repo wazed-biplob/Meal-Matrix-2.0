@@ -4,7 +4,6 @@ const SingleComment = ({ comment }: { comment: IComment }) => {
   function formatTimestampToReadableDate(timestamp: string) {
     const date = new Date(timestamp);
 
-    // Options for date formatting
     const options = {
       year: "numeric",
       month: "long",
@@ -14,7 +13,6 @@ const SingleComment = ({ comment }: { comment: IComment }) => {
       second: "2-digit",
     };
 
-    // Convert to human-readable format
     const readableDate = date.toLocaleDateString("en-US", options);
     return readableDate;
   }

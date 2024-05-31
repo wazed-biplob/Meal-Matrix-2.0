@@ -4,8 +4,10 @@ const Toggle = () => {
   const [toggle, setToggle] = useState(false);
   useEffect(() => {
     if (toggle) {
+      localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark");
     } else {
+      localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
     }
   });

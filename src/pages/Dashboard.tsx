@@ -1,4 +1,5 @@
 import {
+  FileMarkdownOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   UploadOutlined,
@@ -55,6 +56,11 @@ const Dashboard = () => {
               key: "3",
               icon: <UploadOutlined />,
               label: <Link to="create-supply">Create Supply</Link>,
+            },
+            {
+              key: "4",
+              icon: <FileMarkdownOutlined />,
+              label: <Link to="create-testimonial">Create Testimonials</Link>,
             },
           ]}
         />
