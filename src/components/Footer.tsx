@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col space-y-4">
-            <h2 className="font-medium">Customization</h2>
+            <h2 className="font-medium">Customisation</h2>
             <div className="flex flex-col space-y-2 text-sm dark:text-gray-600">
               <a rel="noopener noreferrer" href="#">
                 Configuration
@@ -75,7 +75,7 @@ const Footer = () => {
                 Breakpoints
               </a>
               <a rel="noopener noreferrer" href="#">
-                Customizing Colors
+                Customising Colors
               </a>
               <a rel="noopener noreferrer" href="#">
                 Customizing Spacing

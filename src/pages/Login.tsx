@@ -103,7 +103,7 @@ const Login = () => {
             </p>
             <p className="mb-4 text-3xl font-semibold">J. J. Thompson</p>
             <p className="">Founder, WB</p>
-            <p className="mb-7 text-sm opacity-70">Mill-Matrix Corporation</p>
+            <p className="mb-7 text-sm opacity-70">Meal-Matrix Corporation</p>
           </div>
           <img
             className="-z-1 absolute top-0 h-full w-full object-cover opacity-40"

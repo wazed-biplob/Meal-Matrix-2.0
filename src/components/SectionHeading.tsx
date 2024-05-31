@@ -7,7 +7,7 @@ const SectionHeading = ({
   subtitle: string;
 }) => {
   return (
-    <div className="flex flex-col justify-center items-center mt-0 mb-16">
+    <div className="flex flex-col justify-center items-center mt-10 mb-16">
       <div className="text-5xl font-[600] flex justify-center items-center font-poppins dark:text-gray-300 text-center">
         {children}
       </div>

@@ -11,6 +11,7 @@ import Chart from "../components/Chart";
 import Supplies from "../pages/Supplies";
 import PrivateRoute from "./PrivateRoute";
 import LeaderBoard from "../pages/LeaderBoard";
+import Community from "../pages/Community";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ export const router = createBrowserRouter([
       { path: "supplies", element: <Supplies /> },
       { path: "supplies/:id", element: <SingleProduct /> },
       { path: "leaderboard", element: <LeaderBoard /> },
+      { path: "community", element: <Community /> },
     ],
   },
   {

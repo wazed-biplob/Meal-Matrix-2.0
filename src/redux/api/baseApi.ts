@@ -55,6 +55,12 @@ export const baseApi = createApi({
         method: "GET",
       }),
     }),
+    getComments: builder.query({
+      query: () => ({
+        url: "/comments",
+        method: "GET",
+      }),
+    }),
     login: builder.mutation({
       query: (data) => ({
         url: "/auth/login",
@@ -74,4 +80,5 @@ export const {
   useDonateSupplyMutation,
   useDeleteProductMutation,
   useGetDonorsQuery,
+  useGetCommentsQuery,
 } = baseApi;

@@ -13,7 +13,7 @@ const LeaderBoard = () => {
   return (
     <SectionContainer>
       <SectionHeading subtitle="We are profoundly grateful for the generous support of our incredible donors. Each donation, whether big or small, makes a significant impact in our mission to fight hunger and build a healthier community.">
-        Our Acknowledged Donors
+        Top Acknowledged Donors
       </SectionHeading>
       <div className="grid grid-cols-3 gap-x-4 gap-y-8">
         {donorsData?.data?.map((donor: IDonorDetails) => (
