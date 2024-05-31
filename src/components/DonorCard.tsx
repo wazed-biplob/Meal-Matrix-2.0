@@ -1,3 +1,5 @@
+import { formatTimestampToReadableDate } from "../utils/timestampToTime";
+
 export interface IReview {
   _id: string;
   donorName: string;
@@ -23,7 +25,7 @@ const DonorCard = ({ review }: { review: IReview }) => {
             <div>
               <h4 className="font-bold">{review?.donorName}</h4>
               <span className="text-xs dark:text-gray-400">
-                {review.reviewDate}
+                {formatTimestampToReadableDate(review.reviewDate)}
               </span>
             </div>
           </div>

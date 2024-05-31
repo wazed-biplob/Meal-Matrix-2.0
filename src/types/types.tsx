@@ -16,3 +16,11 @@ export interface IComment {
   likeCount: number;
   email: string;
 }
+
+export interface IVolunteer {
+  _id?: string;
+  name: string;
+  presentAddress: string;
+  imgURL: string;
+  email: string;
+}

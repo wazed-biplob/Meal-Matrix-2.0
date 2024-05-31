@@ -36,6 +36,7 @@ export const baseApi = createApi({
       }),
       invalidatesTags: ["products"],
     }),
+
     getDonorReviews: builder.query({
       query: () => ({
         url: "/donor-reviews",
@@ -50,19 +51,20 @@ export const baseApi = createApi({
       }),
       invalidatesTags: ["products"],
     }),
-    register: builder.mutation({
-      query: (data) => ({
-        url: "/auth/register",
-        method: "POST",
-        body: data,
-      }),
-    }),
     getDonors: builder.query({
       query: () => ({
         url: "/donor-details",
         method: "GET",
       }),
     }),
+
+    getVolunteers: builder.query({
+      query: () => ({
+        url: "/volunteers",
+        method: "GET",
+      }),
+    }),
+
     postTestimonial: builder.mutation({
       query: (data) => ({
         url: "/post-testimonial",
@@ -84,6 +86,14 @@ export const baseApi = createApi({
         body: data,
       }),
       invalidatesTags: ["comments"],
+    }),
+
+    register: builder.mutation({
+      query: (data) => ({
+        url: "/auth/register",
+        method: "POST",
+        body: data,
+      }),
     }),
     login: builder.mutation({
       query: (data) => ({
@@ -108,4 +118,5 @@ export const {
   usePostCommentsMutation,
   useUpdateProductMutation,
   usePostTestimonialMutation,
+  useGetVolunteersQuery,
 } = baseApi;

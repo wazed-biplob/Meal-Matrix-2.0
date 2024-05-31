@@ -14,7 +14,7 @@ import LeaderBoard from "../pages/LeaderBoard";
 import Community from "../pages/Community";
 import CreateTestimonials from "../pages/CreateTestimonials";
 import Volunteer from "../pages/Volunteer";
-import AboutUs from "../components/AboutUs";
+import AboutUs from "../pages/AboutUs";
 
 export const router = createBrowserRouter([
   {

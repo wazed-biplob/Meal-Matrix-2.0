@@ -61,7 +61,7 @@ const DonorSection = () => {
           Real Flavor: Hear from Our Satisfied Customers!
         </SectionHeading>
         <div className="grid grid-cols-3 gap-4">
-          {data?.data?.map((review: IReview, index: number) => (
+          {data?.data?.slice(0, 6).map((review: IReview, index: number) => (
             <CardWrapper key={review._id} index={index}>
               <DonorCard review={review} />
             </CardWrapper>

@@ -1,22 +1,7 @@
 import { IComment } from "../types/types";
+import { formatTimestampToReadableDate } from "../utils/timestampToTime";
 
 const SingleComment = ({ comment }: { comment: IComment }) => {
-  function formatTimestampToReadableDate(timestamp: string) {
-    const date = new Date(timestamp);
-
-    const options = {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-    };
-
-    const readableDate = date.toLocaleDateString("en-US", options);
-    return readableDate;
-  }
-
   const timestamp = comment?.commentDate;
   const humanReadableDate = formatTimestampToReadableDate(timestamp);
 
