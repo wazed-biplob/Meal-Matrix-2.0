@@ -1,6 +1,27 @@
 import { IComment } from "../types/types";
 
 const SingleComment = ({ comment }: { comment: IComment }) => {
+  function formatTimestampToReadableDate(timestamp: string) {
+    const date = new Date(timestamp);
+
+    // Options for date formatting
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    };
+
+    // Convert to human-readable format
+    const readableDate = date.toLocaleDateString("en-US", options);
+    return readableDate;
+  }
+
+  const timestamp = comment?.commentDate;
+  const humanReadableDate = formatTimestampToReadableDate(timestamp);
+
   return (
     <div>
       <div className="mx-auto my-8 flex max-w-screen-sm rounded-xl border border-gray-100 p-4 text-left text-gray-600 shadow-lg sm:p-8">
@@ -11,9 +32,13 @@ const SingleComment = ({ comment }: { comment: IComment }) => {
         />
         <div className="w-full text-left">
           <div className="mb-2 flex flex-col justify-between text-gray-600 sm:flex-row">
-            <h3 className="font-medium">{comment?.username}</h3>
-            <time className="text-xs">{comment?.commentDate}</time>
+            <span>
+              <h3 className="font-medium">{comment?.username}</h3>
+              <p className="text-sm">{comment?.email}</p>
+            </span>
+            <time className="text-xs">{humanReadableDate}</time>
           </div>
+
           <p className="text-sm">{comment?.comment}</p>
           <div className="mt-5 flex items-center justify-between text-gray-600">
             <button

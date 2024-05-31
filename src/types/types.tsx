@@ -8,7 +8,7 @@ export interface IDonorDetails {
 }
 
 export interface IComment {
-  _id: string;
+  _id?: string;
   username: string;
   comment: string;
   commentDate: string;

@@ -1,3 +1,4 @@
+import PostComment from "../components/PostComment";
 import SectionHeading from "../components/SectionHeading";
 import { useGetCommentsQuery } from "../redux/api/baseApi";
 import { IComment } from "../types/types";
@@ -13,6 +14,7 @@ const Community = () => {
       {commentData?.data?.map((comment: IComment) => (
         <SingleComment key={comment?._id} comment={comment} />
       ))}
+      <PostComment />
     </>
   );
 };
