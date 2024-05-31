@@ -13,6 +13,8 @@ import PrivateRoute from "./PrivateRoute";
 import LeaderBoard from "../pages/LeaderBoard";
 import Community from "../pages/Community";
 import CreateTestimonials from "../pages/CreateTestimonials";
+import Volunteer from "../pages/Volunteer";
+import AboutUs from "../components/AboutUs";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +34,8 @@ export const router = createBrowserRouter([
       { path: "supplies/:id", element: <SingleProduct /> },
       { path: "leaderboard", element: <LeaderBoard /> },
       { path: "community", element: <Community /> },
+      { path: "volunteer", element: <Volunteer /> },
+      { path: "about-us", element: <AboutUs /> },
     ],
   },
   {

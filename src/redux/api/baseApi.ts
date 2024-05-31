@@ -63,6 +63,13 @@ export const baseApi = createApi({
         method: "GET",
       }),
     }),
+    postTestimonial: builder.mutation({
+      query: (data) => ({
+        url: "/post-testimonial",
+        method: "POST",
+        body: data,
+      }),
+    }),
     getComments: builder.query({
       query: () => ({
         url: "/comments",
@@ -100,4 +107,5 @@ export const {
   useGetCommentsQuery,
   usePostCommentsMutation,
   useUpdateProductMutation,
+  usePostTestimonialMutation,
 } = baseApi;

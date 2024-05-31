@@ -160,7 +160,7 @@ const CreateSupply = () => {
                 />
               </div>
               <button
-                className="w-full rounded-md col-span-full border px-2 py-4 text-xl font-bold hover:bg-slate-500 hover:text-stone-300"
+                className="w-full rounded-md col-span-full border px-2 py-2 text-xl font-bold hover:bg-slate-500 hover:text-stone-300"
                 type="submit"
               >
                 Submit

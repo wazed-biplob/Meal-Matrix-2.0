@@ -22,14 +22,14 @@ const SingleComment = ({ comment }: { comment: IComment }) => {
 
   return (
     <div>
-      <div className="mx-auto my-8 flex max-w-screen-sm rounded-xl border border-gray-100 p-4 text-left text-gray-600 shadow-lg sm:p-8">
+      <div className="mx-auto my-8 flex max-w-screen-sm rounded-xl border border-gray-100 p-4 text-left text-gray-600 shadow-lg sm:p-8 dark:text-[lightgray]">
         <img
           className="mr-5 block h-8 w-8 max-w-full text-left align-middle sm:h-16 sm:w-16"
           src={comment?.imgURL}
           alt="Profile Picture"
         />
         <div className="w-full text-left">
-          <div className="mb-2 flex flex-col justify-between text-gray-600 sm:flex-row">
+          <div className="mb-2 flex flex-col justify-between text-gray-600 sm:flex-row dark:text-white">
             <span>
               <h3 className="font-medium">{comment?.username}</h3>
               <p className="text-sm">{comment?.email}</p>
@@ -41,7 +41,7 @@ const SingleComment = ({ comment }: { comment: IComment }) => {
           <div className="mt-5 flex items-center justify-between text-gray-600">
             <button
               onClickCapture={() => alert("No Reply has been post yet.")}
-              className="cursor-pointer border py-2 px-8 text-center text-xs leading-tight transition-colors duration-150 ease-in-out hover:border-gray-500 rounded-lg"
+              className="cursor-pointer border py-2 px-8 text-center text-xs leading-tight transition-colors duration-150 ease-in-out hover:border-gray-500 rounded-lg dark:hover:text-[lightgray] dark:text-white"
             >
               Reply
             </button>
