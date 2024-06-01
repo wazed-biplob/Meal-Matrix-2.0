@@ -3,13 +3,13 @@ import {
   useDonateSupplyMutation,
   useGetProductsQuery,
 } from "../redux/api/baseApi";
-import { IProduct } from "../redux/feature/productSlice";
 
 "use client";
 
 import { Modal } from "flowbite-react";
 import { useRef, useState } from "react";
 import { useAppSelector } from "../redux/feature/hook";
+import { IProduct } from "../types/types";
 
 const SingleProduct = () => {
   const { user } = useAppSelector((state) => state.user);

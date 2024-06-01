@@ -1,6 +1,6 @@
 import { Pie, PieChart } from "recharts";
 import { useGetProductsQuery } from "../redux/api/baseApi";
-import { IProduct } from "../redux/feature/productSlice";
+import { IProduct } from "../types/types";
 
 const Chart = () => {
   const { data, isLoading } = useGetProductsQuery(undefined);
