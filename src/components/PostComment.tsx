@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { IComment } from "../types/types";
 import { usePostCommentsMutation } from "../redux/api/baseApi";
 
@@ -13,7 +13,7 @@ const PostComment = () => {
     email: "",
   };
   const [postComment, setPostComment] = useState(commentData);
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const userCommentData = {
       ...postComment,
@@ -70,8 +70,8 @@ const PostComment = () => {
                   <textarea
                     name="comment"
                     placeholder="Write your comment here"
-                    cols="30"
-                    rows="6"
+                    cols={30}
+                    rows={6}
                     className="h-40 w-full min-w-full max-w-full overflow-auto whitespace-pre-wrap rounded-md border bg-white p-5 text-sm font-normal normal-case text-gray-600 opacity-100 outline-none focus:text-gray-600 focus:opacity-100"
                     onBlur={(e) =>
                       setPostComment({

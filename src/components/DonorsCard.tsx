@@ -11,12 +11,14 @@ const DonorsCard = ({ donor }: { donor: IDonorDetails }) => {
         />
         <div className="px-1 mt-2">
           <h2 className="text-xl font-semibold">{donor?.username}</h2>
-          <span className="block py-2 text-sm dark:text-gray-600">
+          <span className="block py-2 text-sm text-gray-600 dark:text-slate-400">
             {donor?.companyName}
           </span>
           <p>
             Donation Amount : &nbsp;
-            <span className="text-[green]">{donor?.donationAmount}</span>
+            <span className="text-[black] dark:text-[lime] ">
+              {donor?.donationAmount}
+            </span>
           </p>
 
           <p className="mt-4">{donor?.donorStatement}</p>

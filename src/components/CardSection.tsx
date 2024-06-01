@@ -4,9 +4,9 @@ import { useGetProductsQuery } from "../redux/api/baseApi";
 import Card from "./Card";
 import SectionHeading from "./SectionHeading";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { IProduct } from "../redux/feature/productSlice";
+
 import { useEffect, useRef } from "react";
-import Container from "./SectionContainer";
+
 import SectionContainer from "./SectionContainer";
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },

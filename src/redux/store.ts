@@ -12,7 +12,7 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
-import themeSlice from "./feature/themeSlice";
+
 const persistConfig = {
   key: "auth",
   storage,
@@ -24,7 +24,7 @@ export const store = configureStore({
   reducer: {
     products: productSlice,
     user: persistAuthReducer,
-    theme: themeSlice,
+
     [baseApi.reducerPath]: baseApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>

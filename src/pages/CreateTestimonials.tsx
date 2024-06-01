@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 import { usePostTestimonialMutation } from "../redux/api/baseApi";
 
@@ -7,6 +7,7 @@ const CreateTestimonials = () => {
 
   const testimonialData = {
     donorName: "",
+    email: "",
     description: "",
     rating: "",
     donorImageURL: "https://i.ibb.co/NYsF47j/i-1.png",
@@ -14,7 +15,7 @@ const CreateTestimonials = () => {
   };
 
   const [postReview, setPostReview] = useState(testimonialData);
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const donorTestimonialData = {
       ...postReview,
@@ -22,7 +23,7 @@ const CreateTestimonials = () => {
     };
 
     const res = await postTestimonial(donorTestimonialData);
-    if (res?.data?.insertedId) {
+    if (res?.data?.data?.insertedId) {
       alert("Comment Has Been Successfully Posted");
     }
   };
@@ -84,8 +85,8 @@ const CreateTestimonials = () => {
               <textarea
                 name="comment"
                 placeholder="Your Testimonial goes here..."
-                cols="30"
-                rows="6"
+                cols={30}
+                rows={6}
                 className="h-40 w-full min-w-full max-w-full overflow-auto whitespace-pre-wrap rounded-md border bg-white p-5 text-sm font-normal normal-case text-gray-600 opacity-100 outline-none focus:text-gray-600 focus:opacity-100"
                 onBlur={(e) =>
                   setPostReview({

@@ -7,6 +7,7 @@ const Volunteer = () => {
     lastName: "",
     email: "",
     presentAddress: "",
+    imgURL: "https://i.ibb.co/NYsF47j/i-1.png",
   };
   const [volunteer, setVolunteer] = useState(volunteerData);
   const [postVolunteer] = useRegisterVolunteerAccountMutation(undefined);
@@ -111,9 +112,7 @@ const Volunteer = () => {
                 src="https://i.ibb.co/NYsF47j/i-1.png"
                 className="h-16 w-16 rounded-full"
               />
-              <p className="text-sm text-gray-600">
-                Upload a suitable profile image for your account
-              </p>
+              <p className="text-sm text-gray-600">Upload currently Disabled</p>
               <input
                 type="file"
                 disabled

@@ -1,7 +1,7 @@
 export function formatTimestampToReadableDate(timestamp: string) {
   const date = new Date(timestamp);
 
-  const options = {
+  const options: Intl.DateTimeFormatOptions = {
     year: "numeric",
     month: "long",
     day: "numeric",
