@@ -3,7 +3,7 @@ import Loader from "../components/Loader";
 import SectionContainer from "../components/SectionContainer";
 import SectionHeading from "../components/SectionHeading";
 import { useGetProductsQuery } from "../redux/api/baseApi";
-import { IProduct } from "../redux/feature/productSlice";
+import { IProduct } from "../types/types";
 
 const Supplies = () => {
   const { data, isLoading } = useGetProductsQuery(undefined);

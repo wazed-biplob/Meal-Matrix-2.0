@@ -24,3 +24,19 @@ export interface IVolunteer {
   imgURL: string;
   email: string;
 }
+
+export interface IProduct {
+  _id: string;
+  title: string;
+  imageURL: string;
+  category: string;
+  description: string;
+  quantity: number;
+  review: number;
+  rating: number;
+  donorName: string;
+  donorImageURL: string;
+  supply: number;
+  sold: number;
+  price: number;
+}

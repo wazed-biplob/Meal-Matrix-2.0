@@ -64,6 +64,13 @@ export const baseApi = createApi({
         method: "GET",
       }),
     }),
+    registerVolunteerAccount: builder.mutation({
+      query: (data) => ({
+        url: "/register-volunteer",
+        method: "POST",
+        body: data,
+      }),
+    }),
 
     postTestimonial: builder.mutation({
       query: (data) => ({
@@ -119,4 +126,5 @@ export const {
   useUpdateProductMutation,
   usePostTestimonialMutation,
   useGetVolunteersQuery,
+  useRegisterVolunteerAccountMutation,
 } = baseApi;

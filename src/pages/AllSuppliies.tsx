@@ -4,12 +4,12 @@ import {
   useGetProductsQuery,
   useUpdateProductMutation,
 } from "../redux/api/baseApi";
-import { IProduct } from "../redux/feature/productSlice";
 
 import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
 import { useAppSelector } from "../redux/feature/hook";
+import { IProduct } from "../types/types";
 
 const AllSuppliies = () => {
   const { user } = useAppSelector((state) => state.user);
@@ -317,13 +317,13 @@ const AllSuppliies = () => {
         </Modal.Body>
       </Modal>
 
-      <div className="container bg-[#001529] p-2 mx-auto sm:p-4 dark:text-gray-800 rounded-lg">
+      <div className="container bg-[#001529] p-2 mx-auto sm:p-4 text-gray-800 rounded-lg">
         <h2 className="mb-4 text-2xl font-semibold leading-tight text-white">
           Product Inventory
         </h2>
         <div className="overflow-x-auto">
           <table className="min-w-full text-xs text-white">
-            <thead className="dark:bg-gray-300">
+            <thead className="bg-gray-300 text-black">
               <tr className="text-left">
                 <th className="p-3">SL</th>
                 <th className="p-3">Product Image</th>
@@ -340,7 +340,7 @@ const AllSuppliies = () => {
               {products?.map((product: IProduct, idx: number) => (
                 <tr
                   key={product?._id}
-                  className="border-b border-opacity-20 dark:border-gray-300 dark:bg-gray-50"
+                  className="border-b border-opacity-20 dark:border-gray-300 dark:bg-slate-600"
                 >
                   <td className="p-3">
                     <p>{idx + 1}</p>
@@ -376,7 +376,7 @@ const AllSuppliies = () => {
                     <p>{product?._id}</p>
                   </td>
                   <td className="p-3 text-right">
-                    <span className="px-3 py-1 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">
+                    <span className="px-3 py-1 font-semibold rounded-md dark:text-gray-50">
                       <span className="border px-2">{product?.supply}</span>
                       <span className="border px-2">{product?.sold}</span>
                     </span>
@@ -397,7 +397,7 @@ const AllSuppliies = () => {
                         setProductId({ id: product?._id });
                         setOpenModal(true);
                       }}
-                      className="border px-2 py-1 rounded-md"
+                      className="border px-2 me-2 py-1 rounded-md"
                     >
                       Delete
                     </button>

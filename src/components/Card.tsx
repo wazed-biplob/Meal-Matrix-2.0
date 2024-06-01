@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { IProduct } from "../redux/feature/productSlice";
+import { IProduct } from "../types/types";
 
 const Card = ({ product }: { product: IProduct }) => {
   return (
     <>
-      <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md divide-gray-700 dark:bg-gray-900 dark:text-gray-100 bg-gray-50 text-gray-800">
+      <div className="flex flex-col border border-slate-400 max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md divide-gray-700 dark:bg-gray-900 dark:text-gray-100 bg-gray-50 text-gray-800">
         <div className="flex space-x-4">
           <img
             alt="donor-image"
