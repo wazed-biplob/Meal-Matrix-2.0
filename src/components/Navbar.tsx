@@ -45,7 +45,7 @@ const Navbar = () => {
               <Toggle />
             </li>
             <li className="flex gap-x-2">
-              {user?.username ? (
+              {user?.name ? (
                 <>
                   <button
                     onClick={() => dispatch(logout())}

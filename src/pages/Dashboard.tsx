@@ -1,15 +1,10 @@
-import {
-  FileMarkdownOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
-import { Button, Layout, Menu } from "antd";
+import { Button, Layout } from "antd";
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { useAppSelector } from "../redux/feature/hook";
+import { AdminDashboardMenu } from "../dashboard/AdminDashboardMenu";
+import { UserDashboardMenu } from "../dashboard/UserDashboardMenu";
+import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 
 const { Header, Sider, Content } = Layout;
 
@@ -33,37 +28,16 @@ const Dashboard = () => {
             </h3>
           </Link>
           <div className="flex justify-center items-center gap-x-2">
-            <p className="text-white pt-2 font-bold">{user?.username}</p>
+            <p className="text-white pt-2 font-bold">{user?.name}</p>
           </div>
         </div>
-        <Menu
-          className="pt-10"
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={["1"]}
-          items={[
-            {
-              key: "1",
-              icon: <UserOutlined />,
-              label: <Link to="/dashboard">Dashboard</Link>,
-            },
-            {
-              key: "2",
-              icon: <VideoCameraOutlined />,
-              label: <Link to="supplies">Supplies</Link>,
-            },
-            {
-              key: "3",
-              icon: <UploadOutlined />,
-              label: <Link to="create-supply">Create Supply</Link>,
-            },
-            {
-              key: "4",
-              icon: <FileMarkdownOutlined />,
-              label: <Link to="create-testimonial">Create Testimonials</Link>,
-            },
-          ]}
-        />
+        <>
+          {user?.role === "admin" ? (
+            <AdminDashboardMenu />
+          ) : (
+            <UserDashboardMenu />
+          )}
+        </>
       </Sider>
       <Layout>
         <Header style={{ padding: 0, background: "grey" }}>

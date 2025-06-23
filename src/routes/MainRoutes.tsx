@@ -15,6 +15,7 @@ import Community from "../pages/Community";
 import CreateTestimonials from "../pages/CreateTestimonials";
 import Volunteer from "../pages/Volunteer";
 import AboutUs from "../pages/AboutUs";
+import AllVolunteers from "../pages/AllVolunteers";
 
 export const router = createBrowserRouter([
   {
@@ -53,6 +54,7 @@ export const router = createBrowserRouter([
       },
       { path: "supplies", element: <AllSuppliies /> },
       { path: "create-testimonial", element: <CreateTestimonials /> },
+      { path: "volunteer-list", element: <AllVolunteers /> },
     ],
   },
 ]);

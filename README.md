@@ -1,4 +1,4 @@
-# Meal-Matrix : Food Distribution and Supplies Management System
+# Meal-Matrix : Food Distribution and Supply Management System
 
 by : [@wazed_biplob](https://github.com/wazed-biplob)
 
@@ -15,7 +15,7 @@ This project demonstrates Reduxjs [with Typescript] and uses RTK Query. The main
 - State Management using Reduxjs
 - Smooth and seamless API Requests with RTK Query
 - Sate Data persistency between Page Reloads [Redux Persist]
-- Ant Design for Admin Panle UI
+- Ant Design for Admin Panel UI
 - React Flowbite for Carousel UI
 - Pie Chart for showing Supply Item Distribution
 - React Router Dom for Route Definition and Protected Routes

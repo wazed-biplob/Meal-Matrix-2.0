@@ -16,7 +16,7 @@ const Login = () => {
     const { data } = await postData(user).unwrap();
     dispatch(addUser(data));
     if (data?.email) {
-      navigate(`/`);
+      navigate(`/dashboard`);
     } else {
       alert("Something went wrong!");
     }
@@ -27,19 +27,6 @@ const Login = () => {
         <div className="flex w-full flex-col md:w-1/2">
           <div className="flex justify-center pt-12 md:-mb-24 md:justify-start md:pl-12"></div>
           <div className="lg:w-[28rem] mx-auto my-auto flex flex-col justify-center pt-8 md:justify-start md:px-6 md:pt-0">
-            <button className="-2 mt-8 flex items-center justify-center rounded-md border px-4 py-1 outline-none ring-gray-400 ring-offset-2 transition focus:ring-2 hover:border-transparent hover:bg-black hover:text-white">
-              <img
-                className="mr-2 h-5"
-                src="https://static.cdnlogo.com/logos/g/35/google-icon.svg"
-                alt="image"
-              />
-              Log in with Google
-            </button>
-            <div className="relative mt-8 flex h-px place-items-center bg-gray-200">
-              <div className="absolute left-1/2 h-6 w-14 -translate-x-1/2 bg-white text-center text-sm text-gray-500">
-                or
-              </div>
-            </div>
             <form
               onSubmit={handleSubmit}
               className="flex flex-col pt-3 md:pt-8"
@@ -101,8 +88,7 @@ const Login = () => {
               chefs. Your journey to becoming a food master starts here. Let's
               cook, learn, and enjoy together!
             </p>
-            <p className="mb-4 text-3xl font-semibold">J. J. Thompson</p>
-            <p className="">Founder, WB</p>
+
             <p className="mb-7 text-sm opacity-70">Meal-Matrix Corporation</p>
           </div>
           <img

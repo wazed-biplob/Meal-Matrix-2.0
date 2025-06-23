@@ -12,7 +12,7 @@ const FreeTrial = () => {
               </h2>
               <p className="text-base text-gray-700 md:text-lg dark:text-[lightgrey]">
                 Imagine a world where no one goes hungry and surplus food finds
-                its way to those in need. At NutriServe, we’re making that
+                its way to those in need. At Meal-Matrix, we’re making that
                 vision a reality. Our cutting-edge Food Distribution and
                 Supplies Management System connects generous donors with
                 communities in need, ensuring that nutritious meals and

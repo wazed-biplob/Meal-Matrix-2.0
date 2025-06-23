@@ -247,8 +247,8 @@ const AllSuppliies = () => {
                       Donor Name
                     </label>
                     <input
-                      defaultValue={user?.username ? user?.username : ""}
-                      disabled={user?.username ? true : false}
+                      defaultValue={user?.name ? user?.name : ""}
+                      disabled={user?.name ? true : false}
                       required
                       type="text"
                       className="bg-slate-400 w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
